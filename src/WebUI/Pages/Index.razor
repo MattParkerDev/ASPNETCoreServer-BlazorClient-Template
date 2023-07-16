@@ -1,0 +1,11 @@
+﻿@page "/"
+@inject DataState DataState
+
+<PageTitle>Status</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Status</MudText>
+
+@if (DataState.Authorized)
+{
+    <AllFriendsStatus/>
+}

@@ -83,6 +83,8 @@ builder.Services.AddCors(
         )
 );
 
+builder.Services.AddApplication();
+
 var app = builder.Build();
 
 // CORS
@@ -107,5 +109,6 @@ await db.Database.EnsureDeletedAsync();
 await db.Database.EnsureCreatedAsync();
 
 app.MapAuthRoutes();
+app.MapTodoItemRoutes();
 
 app.Run();
